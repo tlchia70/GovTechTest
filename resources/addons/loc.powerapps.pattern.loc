@@ -1,0 +1,15 @@
+# This locator configuration is used by PowerApps Addon
+
+
+auto.loc.powerapp.label="xpath=//LABEL[text()='${loc.auto.fieldName}']","xpath=//LABEL[contains(text(),'${loc.auto.fieldName}')]']"
+auto.loc.powerapp.input="xpath=//INPUT[@id='${loc.auto.forValue}']","xpath=//textarea[@id='${loc.auto.forValue}']","id=${loc.auto.forValue}"]
+auto.loc.powerapp.select="xpath=//SELECT[@id='${loc.auto.forValue}']
+auto.loc.powerapp.textarea="xpath=//TEXTAREA[@id='${loc.auto.forValue}']"
+auto.loc.powerapp.button="xpath=//BUTTON[@type='button']//span[text()='${loc.auto.fieldName}']"
+auto.loc.powerapp.radio_button="xpath=//span[contains(text(),'${loc.auto.fieldName}')]/parent::label[text()='${loc.auto.fieldValue}']"
+auto.loc.powerapp.checkbox="xpath=//FIELDSET[@aria-label='${loc.auto.fieldName}']/descendant::LABEL[text()='${loc.auto.fieldValue}']"
+auto.loc.powerapp.button.switch="xpath=(//strong[text()='${loc.auto.fieldName}']/preceding::button[@role='switch'])[${loc.auto.fieldInstance}]"
+
+auto.loc.lhub.pattern.textarea.formula="xpath=(//strong[text()='${loc.auto.fieldName}']/following::textarea)[1]"
+
+# //span[contains(text(),'Is this a staged development?')]/parent::label[text()='Yes']

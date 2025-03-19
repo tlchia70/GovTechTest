@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--&lt;!&ndash;  Parallel Execution, NOT: Make sure thread count is increased as required&ndash;&gt;-->
+<!--<suite name="goBusiness Demo Test Suite" verbose="0" parallel="tests" thread-count="2">-->
+
+<!--  Parallel Execution of scenarios within same test, NOT: Make sure thread count is increased as required-->
+<!--<suite name="goBusiness Demo Test Suite" verbose="0" parallel="classes" thread-count="2">-->
+<suite name="Technical Test" verbose="0" parallel="none" thread-count="1">
+  <listeners>
+    <listener class-name="com.ahq.listeners.TestListener"/>
+  </listeners>
+  <test name="Technical Test" enabled="true" preserve-order="true">
+    <parameter name="log4j.logger.freemarker.cache" value="INFO, CONSOLE"/>
+    <parameter name="exec.name" value="Config-1 Execution 1"/>
+    <parameter name="exec.index" value="1"/>
+    <parameter name="env.code" value="TechTest"/>
+    <parameter name="env.resources" value="resources;environment-config/TechTest;execution-config/TechTest"/>
+    <parameter name="include" value="{'groups':['TechTest']}"/>
+    <classes>
+      <class name="com.qmetry.qaf.automation.step.client.text.BDDTestFactory2"/>
+    </classes>
+  </test>
+</suite>
